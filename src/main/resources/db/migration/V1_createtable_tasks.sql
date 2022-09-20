@@ -1,4 +1,4 @@
-create table TASKS(
+create table tasks_details(
 id int,
 task_name varchar(40),
 status varchar(200),

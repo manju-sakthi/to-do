@@ -17,7 +17,7 @@ spring:
 
   flyway:
     url: jdbc:postgresql://localhost:5432/postgres
-    schemas: USERSERVICE
+    schemas: todo
     user: postgres
     password: mysecretpassword
 
