@@ -4,7 +4,7 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/postgres
-    password: mysecretpassword
+    password: postgres
     username: postgres
     testOnBorrow: true
     testWhileIdle: true
@@ -17,7 +17,7 @@ spring:
 
   flyway:
     url: jdbc:postgresql://localhost:5432/postgres
-    schemas: USERSERVICE
+    schemas: todo
     user: postgres
-    password: mysecretpassword
+    password: postgres
 

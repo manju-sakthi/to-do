@@ -8,13 +8,17 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+/**
+ * @author Thariq
+ * @created 19-09-2022
+ **/
+
 @Data
 @Entity
-@Table(name = "tasks_details",schema = "todo")
-public class Tasks extends AbstractBaseEntity {
+@Table(name = "TASKS")
+public class Animals extends AbstractBaseEntity {
     @Id
     @GeneratedValue
     private Long id;
-    private String taskName;
-    private String status;
+    private String name;
 }
