@@ -1,5 +1,5 @@
 create table tasks_details(
-id int,
+id int primary key,
 task_name varchar(40),
 status varchar(200),
 created_date date,
