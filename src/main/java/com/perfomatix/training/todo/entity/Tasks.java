@@ -1,26 +1,25 @@
 package com.perfomatix.training.todo.entity;
 
-import lombok.Data;
+import org.hibernate.annotations.SQLDelete;
+import org.hibernate.annotations.Where;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.swing.text.DateFormatter;
+import javax.persistence.*;
 import java.time.LocalDate;
-import java.util.Date;
-@Data
+
 @Entity
 @Table(name = "tasks_details",schema = "todo")
+@SQLDelete(sql = "UPDATE postgres.todo.tasks_details td SET is_active = false WHERE id=?")
+@Where(clause = "is_active=true")
 public class Tasks {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String taskName;
     private String status;
     private LocalDate createdDate;
     private LocalDate modifiedDate;
-    private Boolean isActive;
+
+    private Boolean isActive=Boolean.TRUE;
 
     public Tasks() {
     }
