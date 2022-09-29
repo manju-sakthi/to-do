@@ -13,10 +13,10 @@ import java.util.Date;
 public class Tasks {
     @Id
     @GeneratedValue
-    private int id;
-    private String task_name;
+    private Integer id;
+    private String taskName;
     private String status;
-    private Date created_date;
-    private Date modified_date;
-    private String is_Active;
+    private Date createdDate;
+    private Date modifiedDate;
+    private Boolean isActive;
 }
